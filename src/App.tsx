@@ -1,14 +1,13 @@
-import { Text } from './components/text/Text';
-import { Button } from './components/button/Button';
-import { Section } from './components/section/Section';
+import { Instructions } from './containers/instructions/Instructions';
+import { VideoPreview } from './containers/video-preview/VideoPreview';
+import { CameraProvider } from './contexts/CameraContext';
 
 function App() {
   return (
-    <Section>
-      <Text as="h1">Video Capture</Text>
-      <Text>Click the button to allow camera access. A photo will be taken automatically after a few seconds.</Text>
-      <Button>Start</Button>
-    </Section>
+    <CameraProvider>
+      <Instructions />
+      <VideoPreview />
+    </CameraProvider>
   );
 }
 
