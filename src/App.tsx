@@ -1,5 +1,6 @@
 import { Instructions } from './containers/instructions/Instructions';
 import { VideoPreview } from './containers/video-preview/VideoPreview';
+import { Snapshot } from './containers/snapshot/Snapshot';
 import { CameraProvider } from './contexts/CameraContext';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <CameraProvider>
       <Instructions />
       <VideoPreview />
+      <Snapshot />
     </CameraProvider>
   );
 }

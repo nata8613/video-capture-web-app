@@ -38,6 +38,20 @@ export const useCamera = () => {
     }
   }, []);
 
+  const captureSnapshot = useCallback((): string | null => {
+    const video = videoRef.current;
+    if (!video) return null;
+
+    const { videoWidth: width, videoHeight: height } = video;
+    const canvas = Object.assign(document.createElement('canvas'), { width, height });
+    const canvasContext = canvas.getContext('2d');
+
+    if (!canvasContext) return null;
+
+    canvasContext.drawImage(video, 0, 0, width, height);
+    return canvas.toDataURL('image/png');
+  }, []);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -54,12 +68,15 @@ export const useCamera = () => {
     isStreaming,
     startStream,
     stopStream,
+    captureSnapshot,
   };
 };
 
 const ERROR_MESSAGES: Record<string, string> = {
-  NotAllowedError: 'Camera access denied. Please allow camera access in your browser settings and click the Start button again.',
-  PermissionDeniedError: 'Camera access denied. Please allow camera access in your browser settings and click the Start button again.',
+  NotAllowedError:
+    'Camera access denied. Please allow camera access in your browser settings and click the Start button again.',
+  PermissionDeniedError:
+    'Camera access denied. Please allow camera access in your browser settings and click the Start button again.',
   NotFoundError: 'No camera found on this device. Please connect a camera and click the Start button again.',
 };
 
