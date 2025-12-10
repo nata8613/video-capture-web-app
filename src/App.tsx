@@ -1,15 +1,19 @@
+import { ThemeProvider } from 'styled-components';
 import { Instructions } from './containers/instructions/Instructions';
 import { VideoPreview } from './containers/video-preview/VideoPreview';
 import { Snapshot } from './containers/snapshot/Snapshot';
 import { CameraProvider } from './contexts/CameraContext';
+import { theme } from './styles/theme';
 
 function App() {
   return (
-    <CameraProvider>
-      <Instructions />
-      <VideoPreview />
-      <Snapshot />
-    </CameraProvider>
+    <ThemeProvider theme={theme}>
+      <CameraProvider>
+        <Instructions />
+        <VideoPreview />
+        <Snapshot />
+      </CameraProvider>
+    </ThemeProvider>
   );
 }
 
