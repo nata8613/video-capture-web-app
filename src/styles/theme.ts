@@ -7,6 +7,7 @@ export const theme = {
     white: '#FFFFFF',
     black: '#1A1A1A',
     gray: '#E0E0E0',
+    darkGray: '#A19F9F',
     success: '#2E7D32',
     error: '#C62828',
     warning: '#ED6C02',
@@ -49,3 +50,5 @@ export const theme = {
     large: '0 10px 20px rgba(0, 0, 0, 0.2)',
   },
 } as const;
+
+export type Theme = typeof theme;
