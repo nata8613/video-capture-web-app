@@ -24,5 +24,9 @@ export const Timer = ({ durationInSeconds, onComplete }: TimerProps) => {
     return () => clearTimeout(timer);
   }, [timeLeft, onComplete]);
 
-  return <Text as="span">Photo will be taken in: {timeLeft} seconds</Text>;
+  return (
+    <Text as="span" role="timer" aria-live="polite" aria-atomic="true">
+      Photo will be taken in: {timeLeft} seconds
+    </Text>
+  );
 };

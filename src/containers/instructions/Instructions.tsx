@@ -11,10 +11,19 @@ export const Instructions = () => {
   };
 
   return (
-    <Section>
-      <Text as="h1">Video Capture</Text>
-      <Text>Click the button to allow camera access. A photo will be taken automatically after a few seconds.</Text>
-      <Button onClick={handleStart} disabled={isStreaming}>
+    <Section aria-labelledby="instructions-heading">
+      <Text as="h1" id="instructions-heading">
+        Video Capture
+      </Text>
+      <Text>
+        Click the button to allow camera access. A photo will be taken automatically after a few
+        seconds.
+      </Text>
+      <Button
+        onClick={handleStart}
+        disabled={isStreaming}
+        aria-label={isStreaming ? 'Camera is active' : 'Start camera'}
+      >
         Start
       </Button>
     </Section>
