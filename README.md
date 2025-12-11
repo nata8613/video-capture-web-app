@@ -6,6 +6,12 @@ A single page web application that captures photos from the user's camera using 
 
 This application demonstrates the use of the WebRTC API to access the user's camera. It displays a live video preview, and automatically captures a snapshot after a 5 second countdown.
 
+## Demo
+
+https://github.com/nata8613/video-capture-web-app/raw/main/demo.mp4
+
+A short demonstration showing the application running in the browser and successfully capturing a photo using the camera.
+
 ## Tech Stack
 
 - React
