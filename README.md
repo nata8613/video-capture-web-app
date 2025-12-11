@@ -42,4 +42,18 @@ This project uses [Prettier](https://prettier.io/) for code formatting to ensure
 
 ### ESLint
 
-This project uses [ESLint](https://eslint.org/) for code linting to maintain code quality
+This project uses [ESLint](https://eslint.org/) for code linting to maintain code quality.
+
+## Testing
+
+This project uses [Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/react) for unit and integration testing.
+
+### Running Tests
+
+```bash
+# Run tests in watch mode
+pnpm test
+
+# Run tests with coverage report
+pnpm run test:coverage
+```
