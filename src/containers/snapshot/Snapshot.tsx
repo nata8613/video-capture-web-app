@@ -18,13 +18,13 @@ export const Snapshot = () => {
   };
 
   return (
-    <Section>
-      <TimerWrapper>
+    <Section aria-label="Snapshot result">
+      <TimerWrapper aria-live="polite">
         {isStreaming && <Timer durationInSeconds={5} onComplete={handleTimerComplete} />}
       </TimerWrapper>
       {imageDataUrl && (
-        <SnapshotContainer>
-          <Image src={imageDataUrl} alt="Captured snapshot" />
+        <SnapshotContainer role="region" aria-label="Captured photo">
+          <Image src={imageDataUrl} alt="Captured snapshot of user from camera" />
         </SnapshotContainer>
       )}
     </Section>

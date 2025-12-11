@@ -6,5 +6,9 @@ interface ErrorProps {
 }
 
 export const Error: React.FC<ErrorProps> = ({ children }) => {
-  return <StyledError>{children}</StyledError>;
+  return (
+    <StyledError role="alert" aria-live="assertive">
+      {children}
+    </StyledError>
+  );
 };
