@@ -8,7 +8,7 @@ This application demonstrates the use of the WebRTC API to access the user's cam
 
 ## Demo
 
-https://github.com/nata8613/video-capture-web-app/raw/main/demo.mp4
+https://github.com/user-attachments/assets/6ab3a43b-b274-40a4-ab87-e5262b0acb43
 
 A short demonstration showing the application running in the browser and successfully capturing a photo using the camera.
 
