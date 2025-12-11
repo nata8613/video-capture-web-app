@@ -48,12 +48,23 @@ This project uses [ESLint](https://eslint.org/) for code linting to maintain cod
 
 This project uses [Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/react) for unit and integration testing.
 
+End-to-end tests are written using [Playwright](https://playwright.dev/) and are located in the `tests-e2e/` directory.
+
 ### Running Tests
 
 ```bash
-# Run tests in watch mode
+# Run unit tests in watch mode
 pnpm test
 
-# Run tests with coverage report
+# Run unit tests with coverage report
 pnpm run test:coverage
+
+# Run E2E tests
+pnpm run test:e2e
+
+# Run E2E tests with UI mode
+pnpm run test:e2e:ui
+
+# Run E2E tests in debug mode
+pnpm run test:e2e:debug
 ```
