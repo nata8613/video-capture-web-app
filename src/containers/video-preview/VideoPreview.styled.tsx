@@ -23,6 +23,9 @@ export const VideoContainer = styled.div`
   }
 
   video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     animation: ${fadeIn} 0.3s ease-in;
   }
 `;
